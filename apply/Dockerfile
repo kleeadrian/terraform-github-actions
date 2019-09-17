@@ -10,6 +10,7 @@ LABEL "homepage"="http://github.com/hashicorp/terraform-github-actions"
 LABEL "maintainer"="HashiCorp Terraform Team <terraform@hashicorp.com>"
 
 RUN apk --no-cache add jq curl
+RUN apk add --update-cache --upgrade curl
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
